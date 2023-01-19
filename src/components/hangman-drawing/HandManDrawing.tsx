@@ -6,7 +6,7 @@ width: 250px;
 background-color: #693333;;
 `
 const Pau = styled.div`
-height: 400px;
+height: 350px;
 width: 10px;
 background-color: #693333;;
 `
@@ -81,13 +81,15 @@ rotate: -30deg;
 `
 export const HandManDrawing = () => {
   return (
-    <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+    <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center', }}>
+      <div style={{ position: 'relative', display: 'flex', marginRight: -365}}>
       <Cabeça />
       <Corpo />
       <BraçoEsq />
       <BraçoDir />
       <PernaDir />
       <PernaEsq />
+      </div>
       <Corda />
       <Cordinha />
       <Pau />
