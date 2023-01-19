@@ -6,7 +6,7 @@ width: 250px;
 background-color: #693333;;
 `
 const Pau = styled.div`
-height: 250px;
+height: 400px;
 width: 10px;
 background-color: #693333;;
 `
@@ -17,12 +17,82 @@ width: 125px;
 background-color: #693333;
 position: absolute;
 `
+const Cordinha = styled.div`
+height: 50px;
+width: 10px;
+margin-left: 230px;
+background-color: #693333;
+position: absolute;
+top: 0;
+`
+const Cabeça = styled.div`
+position: absolute;
+top: 50px;
+right: 38px;
+border: 5px solid black;
+border-radius: 100%;
+width: 50px;
+height: 50px;
+`
+const Corpo = styled.div`
+position: absolute;
+top: 108px;
+right: 63.5px;
+background: black;
+height: 98px;
+width: 7px;
+`
+const BraçoEsq = styled.div`
+position: absolute;
+top: 120px;
+right: 65px;
+height: 7px;
+width: 40px;
+background: black;
+rotate: -30deg;
+`
+const BraçoDir = styled.div`
+position: absolute;
+top: 120px;
+right: 30px;
+height: 7px;
+width: 40px;
+background: black;
+rotate: -150deg;
+`
+
+const PernaDir = styled.div`
+position: absolute;
+top: 210px;
+right: 30px;
+height: 7px;
+width: 40px;
+background: black;
+rotate: -150deg;
+`
+const PernaEsq = styled.div`
+position: absolute;
+top: 210px;
+right: 65px;
+height: 7px;
+width: 40px;
+background: black;
+rotate: -30deg;
+`
 export const HandManDrawing = () => {
   return (
-    <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center'}}> 
-    <Corda/>
-    <Pau />
-    <Base />
+    <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <Cabeça />
+      <Corpo />
+      <BraçoEsq />
+      <BraçoDir />
+      <PernaDir />
+      <PernaEsq />
+      <Corda />
+      <Cordinha />
+      <Pau />
+      <Base />
+
     </div>
   )
 }
