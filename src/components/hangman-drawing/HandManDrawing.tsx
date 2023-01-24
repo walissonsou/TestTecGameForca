@@ -79,22 +79,31 @@ width: 40px;
 background: black;
 rotate: -30deg;
 `
-export const HandManDrawing = () => {
+interface numerosAdivinhadosProps {
+  numerosAdivinhados: number;
+}
+
+const bodyPart = [Cabeça,
+  Corpo,
+  BraçoEsq,
+  BraçoDir,
+  PernaDir,
+  PernaEsq]
+
+
+export const HandManDrawing = ({ numerosAdivinhados }: numerosAdivinhadosProps) => {
   return (
-    <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center', }}>
-      <div style={{ position: 'relative', display: 'flex', marginRight: -365}}>
-      <Cabeça />
-      <Corpo />
-      <BraçoEsq />
-      <BraçoDir />
-      <PernaDir />
-      <PernaEsq />
+
+    <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <div style={{ position: 'relative', display: 'flex', marginRight: -365 }}>
+        {bodyPart.slice(0, numerosAdivinhados).map((Body, index) => {
+          return <Body key={index} />
+        })}
       </div>
       <Corda />
       <Cordinha />
       <Pau />
       <Base />
-
     </div>
   )
 }
