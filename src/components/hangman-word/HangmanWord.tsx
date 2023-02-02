@@ -9,19 +9,20 @@ font-size: 4rem;
 font-weight: bold;
 text-transform: uppercase;
 margin-top: 1rem;
+min-width: 2rem;
 `
 interface wordProps {
-  word: string;
+  palavraAdivinhar: string;
   letrasAdivinhadas: string[];
 }
-export const HangmanWord = ({word, letrasAdivinhadas} : wordProps ) => {  
+export const HangmanWord = ({palavraAdivinhar, letrasAdivinhadas} : wordProps ) => {  
   
 
   return (
     <div>
       <>
-        <Wrapper> {word.split("").map((letras, index) => (
-          <span style={{ borderBottom: '0.1em solid black', height: '35px' }} key={index}>
+        <Wrapper> {palavraAdivinhar.split("").map((letras, index) => (
+          <span style={{ borderBottom: '0.1em solid black', height: '35px', minWidth: '50px' }} key={index}>
             <span style={{ visibility: letrasAdivinhadas.includes(letras) ? 'visible' : 'hidden' }}> {letras}
             </span>
           </span>
