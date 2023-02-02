@@ -48,7 +48,7 @@ function App() {
   return (
     <div className="App">
       <h2>  Jogo da velha </h2>
-      <h3> {letrasErradas} </h3>
+      <h3> LETRAS DIGITADAS INCORRETAS: {letrasErradas} </h3>
       {quantasLetrasIncorretas >= 6 ?  <h1> VOCÊ PERDEU</h1> : <h1> Você  tem {numeroChances} chances </h1> }
       <HandManDrawing quantasLetrasIncorretas={quantasLetrasIncorretas} />
       <HangmanWord letrasAdivinhadas={letrasAdivinhadas} palavraAdivinhar={palavraAdivinhar} />
